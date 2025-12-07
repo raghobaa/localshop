@@ -1,0 +1,81 @@
+{
+    "name": "mongo-mcp",
+    "version": "1.0.0",
+    "tools": {
+        "queryDocuments": {
+            "description": "Query MongoDB",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "filter": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection"
+                ]
+            }
+        },
+        "updateDocument": {
+            "description": "Update document(s)",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "filter": {
+                        "type": "object"
+                    },
+                    "update": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection",
+                    "filter",
+                    "update"
+                ]
+            }
+        },
+        "insertDocument": {
+            "description": "Insert new document",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "document": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection",
+                    "document"
+                ]
+            }
+        },
+        "deleteDocument": {
+            "description": "Delete document(s)",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "collection": {
+                        "type": "string"
+                    },
+                    "filter": {
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "collection",
+                    "filter"
+                ]
+            }
+        }
+    }
+}
